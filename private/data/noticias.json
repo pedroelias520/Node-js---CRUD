@@ -1,0 +1,12 @@
+{
+    "noticias":[
+        {
+            "titulo":"Primeira Notícia",
+            "noticia":"Qualquer coisa sobre"
+        },
+        {
+            "titulo":"Segunda Notícia",
+            "noticia":"Qualquer coisa sobre e mais"
+        }        
+    ]
+}

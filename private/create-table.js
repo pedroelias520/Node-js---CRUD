@@ -1,3 +1,4 @@
+import './backend'
 const mysql =  require('mysql')
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -8,7 +9,8 @@ const connection = mysql.createConnection({
 })
 
 connection.connect(function(err){
-    if(err) return console.log(err)
+    if(err) return console.log(err);
+    console.log('Database Conected');
     createTable(connection)
 })
 
@@ -20,6 +22,7 @@ function createTable(conn){
                     "Hora varchar(250) NOT NULL,\n"+
                     "PRIMARY KEY (ID)\n"+
                     ");";
+
     conn.query(sql,function(error,results,fields){
         if(error) return console.log(error);
         console.log('Criou a tabela');
