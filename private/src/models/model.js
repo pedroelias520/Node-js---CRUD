@@ -1,35 +1,28 @@
-const conn = require ('../connection');
+const conn = require ('.../conection');
 
-Carro.prototype.addNewCar = function(placa, modelo, cor, combus){
-    this.placa = placa;
-    this.modelo = modelo;
-    this.cor = cor;
-    this.combus = combus;
+let Pedido = function name() {}
 
-    let query = `INSERT INTO carros VALUES 
-        (default, '${this.placa}', '${this.modelo}', '${this.cor}', '${this.combus}')`;
+Pedido.prototype.AddPedido = function (modelopc,problema,contato,cpf){
+    this.modelopc = modelopc
+    this.problema = problema 
+    this.contato = contato 
+    this.cpf = cpf 
+
+    let query = `INSERT INTO pedidos values (default,'${this.cpf}','${this.contato}','${this.modelopc}','${this.problema}')`;
+
     
-    return new Promise((resolve, reject) => {
-        pool.query(query, (err) => {    
-            if(err)
-               reject(`Erro ao inserir carro: ${err}`);
-            else
-               resolve(`Inserção OK`);
-        });
-    });
+
 }
 
-Carro.prototype.removeCar = function(placa){
-    let query = `DELETE FROM carros WHERE placa = '${placa}'`;
-    
-    return new Promise((resolve, reject) => {
-        pool.query(query, (err) => {
-            if(err) 
-                reject(`Erro ao apagar carro ${err}`);
-    
-            resolve(`Success -> Delete OK`);
-        });      
-    });
+Pedido.prototype.RemovePedido = function(){
+
 }
 
-module.exports = Carro;
+Pedido.prototype.UpdatePedido = function(){
+
+}
+
+Pedido.prototype.ViewPedidos = function(){
+
+}
+
