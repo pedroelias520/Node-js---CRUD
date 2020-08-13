@@ -31,3 +31,5 @@ Carro.prototype.removeCar = function(placa){
         });      
     });
 }
+
+module.exports = Carro;
