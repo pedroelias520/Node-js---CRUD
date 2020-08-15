@@ -53,7 +53,12 @@ Pedido.prototype.UpdatePedido = function (
   this.cpf = cpf;
 
   let query = `UPDATE pedidos set  modelopc = ${modelopc}, problema = ${problema}, contato = ${contato}, cpf = ${cpf} FROM service_number = ${service_number}`;
-  pool.query
+  return new Promise ((resolve, reject)=>{
+    pool.query(query, (error)=>{
+        if(error) reject(`ERRO AO ATUALIZAR PEDIDO: ${error}`)
+        else resolve(`Pedido atualizado`)
+    })
+  })
 };
 
 Pedido.prototype.ViewPedidos = function () {};
