@@ -73,3 +73,5 @@ Pedido.prototype.ViewPedido = function (){
 }
 
 Pedido.prototype.ViewPedidos = function () {};
+
+module.exports = Pedido

@@ -1,6 +1,6 @@
-const Pedido = require('../models/model.js')
+const Pedido = require('../models/model')
 
-let pedido = new Pedido()
+let pedido = new Pedido();
 
 exports.home = (req, res)=>{
     res.render('../views/pages/home.htm');
@@ -31,3 +31,20 @@ exports.RemoverPedido = (req,res) => {
         console.log("Confirme se o numero do pedido está correto")
     })
 }
+
+exports.AtualizarPedido = (req,res) => {
+    let numero_ordem = req.body.numero_ordem
+    let modelo_text = req.body.modelo_text
+    let problema_text = req.body.problema_text 
+    let contato_text = req.body.contato_text
+    let cpf_text = req.body.contato_text 
+
+    pedido.UpdatePedido(modelo_text,problema_text,contato_text,cpf_text,numero_ordem).then((result)=>{
+        console.log("Pedido Atualizado!")
+    }).catch(error=>{
+        console.log("ERRO AO ATUALIZAR PEDIDO:",error)
+    })
+} 
+
+
+
