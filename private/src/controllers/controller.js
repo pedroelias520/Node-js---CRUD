@@ -12,9 +12,22 @@ exports.AdicionarPedido = (req, res) => {
     let contato_text = req.body.contato_text
     let cpf_text = req.body.contato_text 
 
-    pedido.AdicionarPedido().then((result)=>{
-
+    pedido.AddPedido(modelo_text,problema_text,contato_text,cpf_text).
+    then((result)=>{
+        console.log('Pedido adicionado')
+        res.render('')
     }).catch(error => {
-        
+        console.log('Erro ao adicionar pedido:$',error)
+    })
+}
+
+exports.RemoverPedido = (req,res) => {
+    let numero_ordem = req.body.numero_ordem
+
+    pedido.RemovePedido(numero_ordem).then((result) => {
+        console.log("O pedido foi removido")
+    }).catch(error => {
+        console.log("Problema ai remover pedido",error)
+        console.log("Confirme se o numero do pedido está correto")
     })
 }
