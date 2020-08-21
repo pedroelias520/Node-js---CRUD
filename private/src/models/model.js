@@ -61,7 +61,7 @@ Pedido.prototype.UpdatePedido = function (
   })
 };
 
-Pedido.prototype.ViewPedido = function (){
+Pedido.prototype.ViewPedidos = function (){
   let query = 'SELECT * FROM pedidos'
 
   return new Promise((resolve,reject)=> {
@@ -72,6 +72,6 @@ Pedido.prototype.ViewPedido = function (){
   })
 }
 
-Pedido.prototype.ViewPedidos = function () {};
+
 
 module.exports = Pedido

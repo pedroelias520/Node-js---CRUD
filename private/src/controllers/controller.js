@@ -6,6 +6,7 @@ exports.home = (req, res)=>{
     res.render('../views/pages/home.htm');
 }  
 
+//Added
 exports.AdicionarPedido = (req, res) => {
     let modelo_text = req.body.modelo_text
     let problema_text = req.body.problema_text 
@@ -20,7 +21,7 @@ exports.AdicionarPedido = (req, res) => {
         console.log('Erro ao adicionar pedido:$',error)
     })
 }
-
+//Delete
 exports.RemoverPedido = (req,res) => {
     let numero_ordem = req.body.numero_ordem
 
@@ -31,7 +32,7 @@ exports.RemoverPedido = (req,res) => {
         console.log("Confirme se o numero do pedido está correto")
     })
 }
-
+//Update
 exports.AtualizarPedido = (req,res) => {
     let numero_ordem = req.body.numero_ordem
     let modelo_text = req.body.modelo_text
@@ -45,6 +46,15 @@ exports.AtualizarPedido = (req,res) => {
         console.log("ERRO AO ATUALIZAR PEDIDO:",error)
     })
 } 
+
+//Read
+exports.VerPedidos = (req,res) => {
+    pedido.ViewPedidos().then((result)=>{
+        console.log("Função completada")
+    }).catch((error)=>{
+        console.log("Erro na visualização dos dados")
+    })
+}
 
 
 
