@@ -61,4 +61,15 @@ Pedido.prototype.UpdatePedido = function (
   })
 };
 
+Pedido.prototype.ViewPedido = function (){
+  let query = 'SELECT * FROM pedidos'
+
+  return new Promise((resolve,reject)=> {
+    pool.query(query,(error)=>{
+      if(error) reject('ERRO NA LEITURA DOS DADOS')
+      else resolve('A leitura foi concluida')
+    })
+  })
+}
+
 Pedido.prototype.ViewPedidos = function () {};
