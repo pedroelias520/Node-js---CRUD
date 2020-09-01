@@ -38,7 +38,7 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
 
   return new Promise((resolve, reject) => {
     pool.query(query, (err) => {
-      if (err) reject(`ERRO AO INSERIR CARRO : ${err}`);
+      if (err) reject(`ERRO AO INSERIR pedido : ${err}`);
       else resolve(`Pedido ${service_number} adicionado `);
     });
   });
