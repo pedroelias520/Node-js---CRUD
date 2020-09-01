@@ -4,10 +4,10 @@ const pool = require("../../../../../../Downloads/Exemplo_MVC_com_Node-master/Ex
 let Pedido = function name() {};
 
 function GetSeriveNumber() {
-  var number1 = Math.floor(Math.random() * 10);
-  var number2 = Math.floor(Math.random() * 10);
-  var number3 = Math.floor(Math.random() * 10);
-  var number4 = Math.floor(Math.random() * 10);
+  var number1 = Math.floor(Math.random() * 9);
+  var number2 = Math.floor(Math.random() * 9);
+  var number3 = Math.floor(Math.random() * 9);
+  var number4 = Math.floor(Math.random() * 9);
   return `${number1}+${number2}+${number3}+${number4}`;
 }
 
@@ -15,10 +15,26 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
   this.modelopc = modelopc;
   this.problema = problema;
   this.contato = contato;
-  this.cpf = cpf;
-  var service_number = GetSeriveNumber();
+  this.cpf = cpf;  
+  let validation
 
   let query = `INSERT INTO pedidos values (default,'${this.cpf}','${this.contato}','${this.modelopc}','${this.problema}','${service_number}')`;
+
+  do{
+    var service_number = GetSeriveNumber();
+    new Promise ((resolve,reject) => {
+      pool.query(`SELECT * FROM pedidos where ${service_number}`,(error) => {
+        if(error){
+          console.log("Acesso liberado,não foram encontradas seriais iguais")
+          validation = true
+        }else{
+          console.log("ERRO 4466: Seriais repetidas foram encontradas.")
+          console.log("Refatorando...")
+          validation = false
+        }
+      })
+    })
+  }while(error);
 
   return new Promise((resolve, reject) => {
     pool.query(query, (err) => {
