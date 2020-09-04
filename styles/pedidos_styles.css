@@ -62,7 +62,7 @@ ul {
 
 @media screen and (max-width:300px) {
   .column {
-    width: 50%;
+    width: 80%;
   }
 }
   #purple_box {    
@@ -72,9 +72,23 @@ ul {
     color: white;
   }
 
-
+#botao_pedido{
+    font-family: UbuntuM;
+    font-size: large;
+    height: 3rem;
+    width: 100%;
+    border-radius: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 #modelo_label {
-    color: aliceblue;
-    border-radius: 10px;
-    size: 10cm; 
+    border: 10px;
+    border-color: #e7e7e7;
+    height: 5rem;
+    width: 100%;
+    text-size-adjust: unset;
+    color: #973cf8;
+    border-radius: 1rem;
+    size: 10cm;     
+    margin: 1rem;
 }
