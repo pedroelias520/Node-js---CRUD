@@ -23,7 +23,7 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
   do{
     var service_number = GetSeriveNumber();
     new Promise ((resolve,reject) => {
-      pool.query(`SELECT * FROM pedidos where ${service_number}`,(error) => {
+      pool.query(`SELECT * FROM pedidos where servicenumber = ${service_number}`,(error) => {
         if(error){
           console.log("Acesso liberado,não foram encontradas seriais iguais")
           validation = true
@@ -34,7 +34,7 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
         }
       })
     })
-  }while(error);
+  }while(validation==true);
 
   return new Promise((resolve, reject) => {
     pool.query(query, (err) => {

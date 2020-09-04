@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css"/>
+    <title>Fazer Pedido</title>
+</head>
+    
+<body>
+    <header id="bemvindo">
+        <h1 id="bemvindo_letter">Hora de fazer o seu pedido!</h1>
+    </header>
+
+    <ul>
+        <li id="item_list"><a href="Comentários" id="clicable_item">Comentários</a></li>
+        <li id="item_list"><a href="./pedido.htm" id="clicable_item">Fazer pedido</a></li>
+        <li id="item_list"><a href="Ver pedido" id="clicable_item">Ver pedido</a></li>
+        <li id="item_list"><a href="Sobre nós" id="clicable_item">Sobre nós</a></li>
+    </ul>
+
+    <div class="row">
+        
+        <div class="column" id="purple_box">
+            <form>
+                <label for="modelo_label">Modelo:</label><br>
+                <input  type="text" id="modelo_label" name="fname"/>
+                <label for="problema_label">Problema</label>
+                <input type="text" id="problema_label"/>
+                <label for="contato_label">Contato:</label>
+                <input type="text" id="contato_label"/>
+                <label for="CPF">Digite o seu CPF</label>
+                <input type="text" id="cpf_label"/>                
+            </form>
+        </div>   
+        
+        <div class="column" id="image_box">            
+            <img src="/public/images/maintenance.jpg" alt="Maintenance" width="300" height="200">
+        </div>
+
+    </div>
+
+</body>
+</html>
