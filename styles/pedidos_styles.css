@@ -1,0 +1,80 @@
+font-face {
+    font-family: UbuntuM;
+    src: url(/public/fonts/Ubuntu-Bold.ttf);
+}
+body{
+    background-color: #ffffff;
+}
+#bemvindo {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #e7e7e7;    
+}
+#bemvindo_letter {
+    font-size: 50px;
+    color: #a8a8a8;
+    font-family: UbuntuM;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(184, 184, 184);
+  }
+  
+  #item_list {
+    float: left;
+    font-family: UbuntuM;
+  }
+  
+  #item_list #clicable_item {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #item_list #clicable_item :hover {
+    background-color: #973cf8;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media screen and (max-width:300px) {
+  .column {
+    width: 50%;
+  }
+}
+  #purple_box {    
+    background-color: #973cf8;
+    height: 800px;
+    font-family: UbuntuM;
+    color: white;
+  }
+
+
+#modelo_label {
+    color: aliceblue;
+    border-radius: 10px;
+    size: 10cm; 
+}
