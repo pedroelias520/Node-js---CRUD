@@ -1,5 +1,4 @@
-const conn = require(".../conection");
-const pool = require("../../../../../../Downloads/Exemplo_MVC_com_Node-master/Exemplo_MVC_com_Node-master/connection");
+const conn = require("...../conection");
 
 let Pedido = function name() {};
 
@@ -23,7 +22,7 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
   do{
     var service_number = GetSeriveNumber();
     new Promise ((resolve,reject) => {
-      pool.query(`SELECT * FROM pedidos where servicenumber = ${service_number}`,(error) => {
+      conn.query(`SELECT * FROM pedidos where servicenumber = ${service_number}`,(error) => {
         if(error){
           console.log("Acesso liberado,não foram encontradas seriais iguais")
           validation = true
@@ -37,7 +36,7 @@ Pedido.prototype.AddPedido = function (modelopc, problema, contato, cpf) {
   }while(validation==true);
 
   return new Promise((resolve, reject) => {
-    pool.query(query, (err) => {
+    conn.query(query, (err) => {
       if (err) reject(`ERRO AO INSERIR pedido : ${err}`);
       else resolve(`Pedido ${service_number} adicionado `);
     });
@@ -49,7 +48,7 @@ Pedido.prototype.RemovePedido = function (s_number) {
   let query = `DELETE FROM pedidos where service_number=${s_number}`;
 
   return new Promise((resolve, reject) => {
-    pool.query(query, (error) => {
+    conn.query(query, (error) => {
       if (error) reject(`Erro ao apagar pedido: ${error}`);
       else resolve(`Pedido excluído`);
     });
@@ -70,7 +69,7 @@ Pedido.prototype.UpdatePedido = function (
 
   let query = `UPDATE pedidos set  modelopc = ${modelopc}, problema = ${problema}, contato = ${contato}, cpf = ${cpf} FROM service_number = ${service_number}`;
   return new Promise ((resolve, reject)=>{
-    pool.query(query, (error)=>{
+    conn.query(query, (error)=>{
         if(error) reject(`ERRO AO ATUALIZAR PEDIDO: ${error}`)
         else resolve(`Pedido atualizado`)
     })
@@ -81,7 +80,7 @@ Pedido.prototype.ViewPedidos = function (){
   let query = 'SELECT * FROM pedidos'
 
   return new Promise((resolve,reject)=> {
-    pool.query(query,(error)=>{
+    conn.query(query,(error)=>{
       if(error) reject('ERRO NA LEITURA DOS DADOS')
       else resolve('A leitura foi concluida')
     })
