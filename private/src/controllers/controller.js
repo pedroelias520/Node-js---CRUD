@@ -3,8 +3,12 @@ const Pedido = require('../models/model')
 let pedido = new Pedido();
 
 exports.home = (req, res)=>{
-    res.render('../views/pages/home');
+    res.render('home');
 }  
+
+exports.render_pedido =(req,res)=>{
+    res.render('pedido')
+}
 
 //Added
 exports.AdicionarPedido = (req, res) => {
