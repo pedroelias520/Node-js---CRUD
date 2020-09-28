@@ -1,4 +1,4 @@
-const conn = require("...../conection");
+const conn = require("../../../conection");
 
 let Pedido = function name() {};
 
