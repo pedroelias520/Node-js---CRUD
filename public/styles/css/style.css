@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Ubuntu_Bold";
+  src: url("../../fonts/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu_Medium";
+  src: url("../../fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu_Light";
+  src: url("../../fonts/Ubuntu-Light.ttf");
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  /* line 29, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  body {
+    color: #FFFFFF;
+    background-color: #1F253C;
+    font-family: "Ubuntu_Bold";
+    margin: 0px;
+  }
+  /* line 36, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  ul {
+    list-style-type: none;
+    height: 2rem;
+  }
+  /* line 41, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  li {
+    display: inline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* line 47, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  /* line 52, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  #nav_bar {
+    width: 100%;
+    vertical-align: bottom;
+    display: table;
+    column-count: auto auto;
+    background-color: #0037FF;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 61, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  .column {
+    display: table-cell;
+  }
+  /* line 65, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  #container {
+    padding: 10px;
+    background-color: #0037FF;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

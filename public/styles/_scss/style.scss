@@ -1,0 +1,76 @@
+$primary_color : #0037FF;
+$secondary_color : #1F253C;
+$default_color: #FFFFFF;
+@font-face {
+    font-family: "Ubuntu_Bold";
+    src: url('../../fonts/Ubuntu-Bold.ttf');
+}
+@font-face {
+    font-family: "Ubuntu_Medium";
+    src: url('../../fonts/Ubuntu-Medium.ttf');    
+}
+@font-face {
+    font-family: "Ubuntu_Light";
+    src: url('../../fonts/Ubuntu-Light.ttf')
+}
+
+$ubuntu_b: "Ubuntu_Bold";
+$ubuntu_m: "Ubuntu_Medium";
+$ubuntu_l: "Ubuntu_Light";
+
+
+
+@media screen and (min-width:240px) and (max-width:768) {
+
+}
+
+@media screen and (min-width:1024px) and (orientation:landscape) {
+
+    body {
+        color: $default_color;
+        background-color: $secondary_color;
+        font-family: $ubuntu_b;     
+        margin: 0px;
+    }
+    
+    ul{                  
+        list-style-type: none;            
+        height: 2rem;             
+    }
+    
+    li{     
+        display: inline;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $default_color;
+     }
+    
+     #nav_bar {
+         width: 100%;
+         vertical-align: bottom;
+         display: table;         
+         column-count: auto auto;
+         background-color: $primary_color;
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .column {
+         display: table-cell;         
+     }
+
+    #container {
+        padding: 10px;
+        background-color: $primary_color;
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width:1024px) and (orientation:portrait) {
+
+}
+
