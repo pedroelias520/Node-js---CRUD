@@ -14,47 +14,125 @@
 }
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
-  /* line 29, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 30, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   body {
     color: #FFFFFF;
-    background-color: #1F253C;
+    background-color: #004288;
     font-family: "Ubuntu_Bold";
     margin: 0px;
   }
-  /* line 36, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 37, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   ul {
     list-style-type: none;
     height: 2rem;
   }
-  /* line 41, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 42, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   li {
     display: inline;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  /* line 47, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 48, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   a {
     text-decoration: none;
     color: #FFFFFF;
   }
-  /* line 52, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 53, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   #nav_bar {
     width: 100%;
     vertical-align: bottom;
     display: table;
     column-count: auto auto;
-    background-color: #0037FF;
+    background-color: #007bff;
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 61, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  /* line 62, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   .column {
     display: table-cell;
   }
   /* line 65, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #007bff;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  /* line 74, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #ff6f00;
+    width: 100px;
+    border-radius: 0px 0px 8px 8px;
+    transition: all .5s ease 0s;
+  }
+  /* line 84, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+  }
+  /* line 98, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a:nth-child(1) {
+    width: 100px;
+  }
+  /* line 102, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .start-home, a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+  }
+  /* line 107, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a:nth-child(2) {
+    width: 120px;
+  }
+  /* line 111, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .start-home, a:nth-child(2):hover ~ .animation {
+    width: 120px;
+    left: 100px;
+  }
+  /* line 116, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a:nth-child(3) {
+    width: 140px;
+  }
+  /* line 120, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .start-home, a:nth-child(3):hover ~ .animation {
+    width: 140px;
+    left: 220px;
+  }
+  /* line 125, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a:nth-child(4) {
+    width: 100px;
+  }
+  /* line 129, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .start-home, a:nth-child(4):hover ~ .animation {
+    width: 100px;
+    left: 360px;
+  }
+  /* line 134, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  a:nth-child(5) {
+    width: 100px;
+  }
+  /* line 138, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
+  nav .start-home, a:nth-child(5):hover ~ .animation {
+    width: 100px;
+    left: 460px;
+  }
+  /* line 143, ../../../Documents/Projetos_GitHub/Node-js---CRUD/public/styles/_scss/style.scss */
   #container {
     padding: 10px;
-    background-color: #0037FF;
+    background-color: #007bff;
     width: 50%;
   }
 }
