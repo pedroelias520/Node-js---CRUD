@@ -14,10 +14,15 @@ $default_color: #FFFFFF;
     font-family: "Ubuntu_Light";
     src: url('../../fonts/Ubuntu-Light.ttf')
 }
+@font-face {
+    font-family: "Montserrat_bold";
+    src: url('../../fonts/Montserrat-Bold.ttf');
+}
 
 $ubuntu_b: "Ubuntu_Bold";
 $ubuntu_m: "Ubuntu_Medium";
 $ubuntu_l: "Ubuntu_Light";
+$montserrat: "Montserrat_bold";
 
 
 
@@ -62,12 +67,13 @@ $ubuntu_l: "Ubuntu_Light";
      .column {
          display: table-cell;         
      }
+
      nav {
          position: relative;         
          width: 100%;
          height: 50px;
          background: $primary_color;
-         border-radius: 0px 0px 8px 8px;
+         border-radius: 0px 0px 0px 0px;
          font-size: 0;
          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
      }
@@ -82,6 +88,7 @@ $ubuntu_l: "Ubuntu_Light";
          transition: all .5s ease 0s;
      }
      nav a{
+        font-family: $montserrat;
         font-size: 15px;
         text-transform: uppercase;
         color: $default_color;
@@ -139,13 +146,35 @@ $ubuntu_l: "Ubuntu_Light";
         width: 100px;
         left: 460px;
     }
-
-    #container {
-        padding: 10px;
-        background-color: $primary_color;
-        width: 50%;
+    #container {        
+        padding: 30px
     }
-
+    #download_banner{
+        padding: 0;
+    }
+    #employ {
+        width: 100%;
+        margin: 0;
+    }
+    #banner {
+        margin: 0;
+        column-count: 2;
+        padding-top: 2rem;
+        padding-bottom: 2rem;             
+        font-family: $montserrat;
+        text-align: center;        
+        background-color: $item_color;
+        height: 12rem;
+        width: 100%;
+    }
+    #content{
+        column-count: 1;
+    }
+    #divider{
+        border: 3px solid $primary_color;
+        height: 500px;
+        width: 0;
+    }
 }
 
 @media screen and (min-width:1024px) and (orientation:portrait) {
